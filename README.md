@@ -1,6 +1,6 @@
 # GathSession — CSS Tarea entregable 2
 
-Proyecto inicial en HTML5 y CSS3, basado en el diseño proporcionado por Conquer Blocks.
+Proyecto inicial en HTML y CSS.
 
 ## Estructura
 - `index.html`: estructura semántica de la página.
