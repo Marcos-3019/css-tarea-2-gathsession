@@ -1,0 +1,265 @@
+:root {
+  --background: #292a33;
+  --text: #f7f5f5;
+  --muted: #b9b8c0;
+  --pink: #f02f75;
+  --font-body: "DM Sans", sans-serif;
+  --font-title: "DM Serif Display", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.page {
+  position: relative;
+  width: min(100%, 1920px);
+  min-height: 1080px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--background);
+}
+.site-header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8.2%;
+  position: relative;
+  z-index: 5;
+}
+.brand {
+  font-family: var(--font-title);
+  font-size: 27px;
+  letter-spacing: -1px;
+}
+.brand span:first-child {
+  color: var(--pink);
+}
+.brand span:last-child {
+  color: #fff;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.main-nav a {
+  color: #d4d1d8;
+  font-size: 15px;
+  transition: color 0.25s ease;
+}
+.main-nav a:hover {
+  color: var(--pink);
+}
+.hero {
+  position: relative;
+  min-height: 850px;
+  padding: 95px 8.2% 80px;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: start;
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  padding-top: 0;
+}
+.hero h1 {
+  font-family: var(--font-title);
+  font-size: clamp(54px, 5vw, 88px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.7px;
+}
+.hero-description {
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 36px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  font-size: 15px;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+.button:hover {
+  transform: translateY(-3px);
+}
+.button-primary {
+  min-width: 174px;
+  padding: 0 25px;
+  border-radius: 9px;
+  background: var(--pink);
+  color: #fff;
+}
+.button-primary:hover {
+  background: #ff4b8b;
+}
+.button-text {
+  color: #eeeaf0;
+}
+.button-text:hover {
+  color: var(--pink);
+}
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-top: 100px;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e8e5eb;
+  font-size: 13px;
+  line-height: 1.35;
+}
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #454651;
+  color: #f7a5c1;
+  font-size: 22px;
+}
+.people {
+  position: relative;
+  min-height: 650px;
+  margin-top: -20px;
+}
+.person {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 48px;
+}
+.person img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+.person-orange {
+  left: 4%;
+  top: 0;
+  width: 210px;
+  height: 335px;
+  background: #7824e8;
+}
+.person-pink {
+  left: 29%;
+  top: 0;
+  width: 205px;
+  height: 225px;
+  background: #68d5d4;
+  border-radius: 100px;
+}
+.person-yellow {
+  left: 57%;
+  top: 55px;
+  width: 205px;
+  height: 300px;
+  background: #f5bd3b;
+}
+.person-brown {
+  left: 29%;
+  top: 255px;
+  width: 205px;
+  height: 350px;
+  background: #a45c35;
+}
+.person-floral {
+  left: 57%;
+  top: 365px;
+  width: 205px;
+  height: 270px;
+  background: #f02f75;
+}
+.orbit {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.orbit-one {
+  width: 690px;
+  height: 690px;
+  left: -2%;
+  top: -40px;
+}
+.orbit-two {
+  width: 540px;
+  height: 540px;
+  left: 7%;
+  top: 30px;
+}
+@media (max-width: 900px) {
+  .page {
+    min-height: 100vh;
+  }
+  .site-header {
+    height: auto;
+    padding: 28px 6%;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+  .main-nav {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .hero {
+    padding: 55px 6%;
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+  .hero h1 {
+    font-size: clamp(46px, 10vw, 72px);
+  }
+  .people {
+    width: 600px;
+    min-height: 650px;
+    margin: 0 0 -293px;
+    margin-left: calc((100% - 600px) / 2);
+    transform: scale(0.55);
+    transform-origin: top center;
+  }
+  .feature-row {
+    margin-top: 60px;
+    flex-wrap: wrap;
+  }
+}
